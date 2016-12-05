@@ -35,10 +35,10 @@ public class MainActivity extends AppCompatActivity {
         DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
         View3DManager.init(this, metrics.widthPixels / 2, metrics.heightPixels / 2, metrics
-                .widthPixels / 2 - 100);
-        for (int i = 0; i < 12; i++) {
+                .widthPixels / 2-20);
+        for (int i = 0; i < 20; i++) {
             View view = getLayoutInflater().inflate(R.layout.view_item, null);
-            view.setTag(new Point(360 / 12 * i, -30, 0));
+            view.setTag(new Point(360 / 20 * i, -30, 0));
             View3DManager.addView(view);
         }
     }

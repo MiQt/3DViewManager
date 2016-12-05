@@ -22,9 +22,9 @@ public class View3DManager {
     private static int mScreenHeight;
 
     //这几个参数是摸索的参数
-    public static int fuyangHelper = 200; //为了倒扣效果，如果倒扣的越厉害，这个值就要给的越大,赤道上的话这个值为零
+    public static int fuyangHelper = 0; //为了倒扣效果，如果倒扣的越厉害，这个值就要给的越大,赤道上的话这个值为零
     public static float yuanjin = 3; //为了有远近的效果，如果让远的更小，近的更大，那么就增大这个值把
-    public static float fuyang = -30; //为了有远近的效果，如果让远的更小，近的更大，那么就增大这个值把
+    public static float fuyang = 0;
 
 
     //根据传来的坐标点刷新所有View位置
@@ -82,7 +82,7 @@ public class View3DManager {
         } else {
             mViews.add(view);
             //根据view携带的位置addcontentview,默认位于右上角
-            ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(90, 120);
+            ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(90/2, 120/2);
             view.setVisibility(View.GONE);
             view.setY(mcy);
             mActivity.addContentView(view, params);
